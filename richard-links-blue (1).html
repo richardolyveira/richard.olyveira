@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>richard.olyveira</title>
+<style>
+:root{--bg:#080d18;--panel:#0e1728;--line:#1b2b45;--text:#e8eef8;--muted:#8fa1ba;--blue:#63a9ff}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;display:flex;justify-content:center;padding:64px 20px}
+main{width:100%;max-width:560px}
+h1{font-size:34px;letter-spacing:-1.5px;margin:0 0 8px;font-weight:700}
+h1 span{color:var(--blue)}
+.subtitle{color:var(--muted);margin:0 0 34px;font-size:15px}
+.intro{font-size:15px;line-height:1.6;color:#c6d2e3;margin-bottom:28px}
+.details{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;margin-bottom:28px;display:grid;gap:17px}
+.detail{display:flex;gap:22px;align-items:baseline}
+.label{width:92px;flex-shrink:0;font-size:10px;letter-spacing:1.5px;color:#71839d}
+.value{font-size:14px;color:#dce6f4}
+.links{display:grid;gap:10px}
+a.link{display:flex;justify-content:space-between;align-items:center;padding:17px 18px;border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--text);text-decoration:none;font-size:14px;transition:border-color .2s,transform .2s}
+a.link:hover{border-color:var(--blue);transform:translateY(-1px)}
+a.link span:last-child{color:var(--blue);font-size:17px}
+footer{display:flex;justify-content:space-between;margin-top:38px;color:#64758d;font-size:11px;letter-spacing:.6px}
+@media(max-width:480px){body{padding:48px 20px}h1{font-size:29px}.detail{gap:12px}.label{width:82px}}
+</style>
+</head>
+<body>
+<main>
+  <h1>richard.olyveira<span>.</span></h1>
+  <p class="subtitle">Tech Enthusiast</p>
+  <p class="intro">Estudante de tecnologia, aprendendo e evoluindo.</p>
+
+  <section class="details">
+    <div class="detail"><span class="label">STUDYING</span><span class="value">Software Development @ FacUnicamps</span></div>
+    <div class="detail"><span class="label">LEARNING</span><span class="value">English</span></div>
+    <div class="detail"><span class="label">GOAL</span><span class="value">Study abroad in Ireland 🇮🇪</span></div>
+  </section>
+
+  <nav class="links">
+    <a class="link" href="#" onclick="return editLink(event,'github')"><span>GitHub</span><span>↗</span></a>
+    <a class="link" href="#" onclick="return editLink(event,'linkedin')"><span>LinkedIn</span><span>↗</span></a>
+    <a class="link" href="#" onclick="return editLink(event,'twitter')"><span>Twitter / X</span><span>↗</span></a>
+    <a class="link" href="#" onclick="return editLink(event,'email')"><span>Email</span><span>↗</span></a>
+  </nav>
+  <footer><span>richard.olyveira</span><span>LEARNING BY DOING</span></footer>
+</main>
+<script>
+const links={
+  github:"https://github.com/richardolyveira",
+  linkedin:"https://www.linkedin.com/in/richard-faria-de-oliveira-b961b02a6?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+  twitter:"https://x.com/mSyderr",
+  email:"mailto:richardfaria2006@gmail.com"
+};
+function editLink(event,key){
+  if(!links[key]){event.preventDefault();alert("Adicione seu link no arquivo HTML para ativar este botão.");return false;}
+  event.currentTarget.href=links[key];return true;
+}
+</script>
+</body>
+</html>
